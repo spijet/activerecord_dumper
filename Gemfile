@@ -2,4 +2,4 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'rails', ENV['RAILS_VERSION']
+gem 'activerecord', '>=3.0', '< 5.3'
