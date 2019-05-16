@@ -30,5 +30,5 @@ DESC_EOF
 
   s.add_development_dependency 'bundler', '~> 1.14'
   s.add_development_dependency 'rspec', '~> 3.0'
-  s.add_development_dependency 'sqlite3', '~> 1.3'
+  s.add_development_dependency 'sqlite3', '~> 1.3.0'
 end
