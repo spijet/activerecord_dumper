@@ -49,7 +49,7 @@ module ARDumper
     end
 
     def self.table_record_header(io)
-      io.write("  records: \n")
+      io.write("  records:\n")
     end
   end
 
