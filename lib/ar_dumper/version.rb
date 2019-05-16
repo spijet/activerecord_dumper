@@ -1,3 +1,3 @@
 module ARDumper
-  VERSION = '0.8.0c'
+  VERSION = '0.8.0d'.freeze
 end
