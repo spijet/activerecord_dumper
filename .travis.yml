@@ -3,60 +3,45 @@ dist: trusty
 language: ruby
 cache: bundler
 rvm:
+  - 2.2
   - 2.3
   - 2.4
   - 2.5
   - 2.6
 env:
-  - RAILS_VERSION='~> 3.0.0'
-  - RAILS_VERSION='~> 3.1.0'
-  - RAILS_VERSION='~> 3.2.0'
+  - RAILS_VERSION='~> 3.2.22'
   - RAILS_VERSION='~> 4.0.0'
   - RAILS_VERSION='~> 4.1.0'
   - RAILS_VERSION='~> 4.2.0'
+  - RAILS_VERSION='~> 5.0.0'
+  - RAILS_VERSION='~> 5.1.0'
+  - RAILS_VERSION='~> 5.2.0'
 matrix:
   fast_finish: true
   exclude:
+    - env: RAILS_VERSION='~> 3.2.22'
+      rvm: 2.4
+    - env: RAILS_VERSION='~> 3.2.22'
+      rvm: 2.5
+    - env: RAILS_VERSION='~> 3.2.22'
+      rvm: 2.6
     - env: RAILS_VERSION='~> 4.0.0'
-      rvm: 1.8.7
+      rvm: 2.3
     - env: RAILS_VERSION='~> 4.0.0'
-      rvm: 1.9.2
+      rvm: 2.4
+    - env: RAILS_VERSION='~> 4.0.0'
+      rvm: 2.5
+    - env: RAILS_VERSION='~> 4.0.0'
+      rvm: 2.6
     - env: RAILS_VERSION='~> 4.1.0'
-      rvm: 1.8.7
+      rvm: 2.4
     - env: RAILS_VERSION='~> 4.1.0'
-      rvm: 1.9.2
-    - env: RAILS_VERSION='~> 4.2.0'
-      rvm: 1.8.7
-    - env: RAILS_VERSION='~> 4.2.0'
-      rvm: 1.9.2
-  include:
-    - env: RAILS_VERSION='~> 4.2.0'
-      rvm: 2.4
+      rvm: 2.5
+    - env: RAILS_VERSION='~> 4.1.0'
+      rvm: 2.6
     - env: RAILS_VERSION='~> 4.2.0'
       rvm: 2.5
-    - env: RAILS_VERSION='~> 5.0.0'
-      rvm: 2.2
-    - env: RAILS_VERSION='~> 5.0.0'
-      rvm: 2.3
-    - env: RAILS_VERSION='~> 5.0.0'
-      rvm: 2.4
-    - env: RAILS_VERSION='~> 5.0.0'
-      rvm: 2.5
-    - env: RAILS_VERSION='~> 5.1.0'
-      rvm: 2.2
-    - env: RAILS_VERSION='~> 5.1.0'
-      rvm: 2.3
-    - env: RAILS_VERSION='~> 5.1.0'
-      rvm: 2.4
-    - env: RAILS_VERSION='~> 5.1.0'
-      rvm: 2.5
-    - env: RAILS_VERSION='~> 5.2.0'
-      rvm: 2.2
-    - env: RAILS_VERSION='~> 5.2.0'
-      rvm: 2.3
-    - env: RAILS_VERSION='~> 5.2.0'
-      rvm: 2.4
-    - env: RAILS_VERSION='~> 5.2.0'
-      rvm: 2.5
+    - env: RAILS_VERSION='~> 4.2.0'
+      rvm: 2.6
 before_install:
   - gem update bundler
