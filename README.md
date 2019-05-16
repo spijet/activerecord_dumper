@@ -26,13 +26,13 @@ All rake tasks will then be available to you.
 
 ## Usage (Rails)
 
-    rake db:data:dump    ->   Dump contents of Rails database to db/data.yml
-    rake db:data:restore ->   Load contents of db/data.yml into the database
+    rake db:data:dump ->   Dump contents of Rails database to db/data.yml
+    rake db:data:load ->   Load contents of db/data.yml into the database
 
 Further, there are tasks db:dump and db:load which do the entire database (the equivalent of running db:schema:dump followed by db:data:load).  Also, there are other tasks recently added that allow the export of the database contents to/from multiple files (each one named after the table being dumped or loaded).
 
-    rake db:data:dump_dir    ->   Dump contents of database to curr_dir_name/tablename.extension (defaults to yaml)
-    rake db:data:restore_dir ->   Load contents of db/#{dir} into database (where dir is ENV['dir'] || 'base')
+    rake db:data:dump_dir ->   Dump contents of database to curr_dir_name/tablename.extension (defaults to yaml)
+    rake db:data:load_dir ->   Load contents of db/#{dir} into database (where dir is ENV['dir'] || 'base')
 
 In addition, we have plugins whereby you can export your database to/from various formats.  We only deal with yaml and csv right now, but you can easily write tools for your own formats (such as Excel or XML).  To use another format, just load setting the "class"  parameter to the class you are using.  This defaults to "YamlDb::Helper" which is a refactoring of the old yaml_db code.  We'll shorten this to use class nicknames in a little bit.
 
@@ -46,7 +46,7 @@ One common use would be to switch your data from one database backend to another
 
 3. mysqladmin create [database name]
 
-4. `rake db:restore`
+4. `rake db:load`
 
 ## Credits
 
