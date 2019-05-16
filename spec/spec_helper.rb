@@ -1,3 +1,7 @@
+require 'coveralls'
+
+Coveralls.wear!
+
 require 'ar_dumper'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
