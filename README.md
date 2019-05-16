@@ -1,8 +1,8 @@
 # ActiveRecord Dumper
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spijet/activerecord_dumper/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/spijet/activerecord_dumper.svg)](https://github.com/spijet/activerecord_dumper/issues)
-[![Build Status](https://travis-ci.com/spijet/activerecord_dumper.svg?branch=master)](https://travis-ci.com/spijet/activerecord_dumper)
-[![Coverage Status](https://coveralls.io/repos/github/spijet/activerecord_dumper/badge.svg?branch=master)](https://coveralls.io/github/spijet/activerecord_dumper?branch=master)
+[![Build Status](https://img.shields.io/travis/spijet/activerecord_dumper.svg)](https://travis-ci.com/spijet/activerecord_dumper)
+[![Coverage Status](https://img.shields.io/coveralls/spijet/activerecord_dumper.svg)](https://coveralls.io/github/spijet/activerecord_dumper?branch=master)
 
 ARDumper is a fork of YamlDb gem without any explicit Rails dependencies. This
 way it can be used by any AR-enabled app (e.g. Sinatra) without pulling whole
