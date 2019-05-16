@@ -44,4 +44,5 @@ matrix:
     - env: RAILS_VERSION='~> 4.2.0'
       rvm: 2.6
 before_install:
-  - gem install bundler -v '~> 1.0'
+  - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
+  - gem install bundler -v '< 2'
