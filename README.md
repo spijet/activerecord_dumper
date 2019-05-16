@@ -1,5 +1,5 @@
 # ActiveRecord Dumper
-[![GitHub license](https://img.shields.io/github/license/spijet/activerecord_dumper.svg)](https://github.com/spijet/activerecord_dumper)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spijet/activerecord_dumper/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/spijet/activerecord_dumper.svg)](https://github.com/spijet/activerecord_dumper/issues)
 [![Build Status](https://travis-ci.com/spijet/activerecord_dumper.svg?branch=master)](https://travis-ci.com/spijet/activerecord_dumper)
 [![Coverage Status](https://coveralls.io/repos/github/spijet/activerecord_dumper/badge.svg?branch=master)](https://coveralls.io/github/spijet/activerecord_dumper?branch=master)
