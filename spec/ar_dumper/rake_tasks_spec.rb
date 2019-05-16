@@ -1,4 +1,4 @@
-module YamlDb
+module ARDumper
   RSpec.describe RakeTasks do
     before do
       @serializer = instance_double(SerializationHelper::Base)
@@ -33,15 +33,21 @@ module YamlDb
 
       it 'dumps to a directory using a user-specified format class' do
         stub_const('ENV', 'class' => 'UserSpecifiedHelper')
-        expect(SerializationHelper::Base).to receive(:new).once.with(UserSpecifiedHelper)
-        expect(@serializer).to receive(:dump_to_dir).once.with('/root/db/2007-08-09T123456')
+        expect(SerializationHelper::Base).to(
+          receive(:new).once.with(UserSpecifiedHelper)
+        )
+        expect(@serializer).to(
+          receive(:dump_to_dir).once.with('/root/db/2007-08-09T123456')
+        )
         RakeTasks.data_dump_dir_task
       end
 
       it 'dumps to a user-specified directory' do
         stub_const('ENV', 'dir' => 'user_dir')
         expect(SerializationHelper::Base).to receive(:new).once.with(Helper)
-        expect(@serializer).to receive(:dump_to_dir).once.with('/root/db/user_dir')
+        expect(@serializer).to(
+          receive(:dump_to_dir).once.with('/root/db/user_dir')
+        )
         RakeTasks.data_dump_dir_task
       end
     end
@@ -55,7 +61,9 @@ module YamlDb
 
       it 'loads a file using a user-specified format class' do
         stub_const('ENV', 'class' => 'UserSpecifiedHelper')
-        expect(SerializationHelper::Base).to receive(:new).once.with(UserSpecifiedHelper)
+        expect(SerializationHelper::Base).to(
+          receive(:new).once.with(UserSpecifiedHelper)
+        )
         expect(@serializer).to receive(:load).once.with('/root/db/data.ext')
         RakeTasks.data_load_task
       end
@@ -70,7 +78,9 @@ module YamlDb
 
       it 'loads a directory using a user-specified format class' do
         stub_const('ENV', 'class' => 'UserSpecifiedHelper')
-        expect(SerializationHelper::Base).to receive(:new).once.with(UserSpecifiedHelper)
+        expect(SerializationHelper::Base).to(
+          receive(:new).once.with(UserSpecifiedHelper)
+        )
         expect(@serializer).to receive(:load_from_dir).once.with('/root/db/base')
         RakeTasks.data_load_dir_task
       end

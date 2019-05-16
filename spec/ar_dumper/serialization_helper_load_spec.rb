@@ -1,4 +1,4 @@
-module YamlDb
+module ARDumper
   module SerializationHelper
     RSpec.describe Load do
 
