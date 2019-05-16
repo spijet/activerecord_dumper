@@ -29,14 +29,18 @@ module ARDumper
     end
 
     def self.dump_dir(dir = '')
-      if APP_DIR
-        "#{APP_DIR}/db#{dir}"
-      elsif ENV['APP_DIR']
-        "#{ENV['APP_DIR']}/db#{dir}"
-      elsif ENV['APP_ROOT']
-        "#{ENV['APP_ROOT']}/db#{dir}"
-      elsif defined? Rails
-        "#{Rails.root}/db#{dir}"
+      "#{root_dir}/db#{dir}"
+    end
+
+    def self.root_dir
+      return Rails.root if defined? Rails
+      return APP_DIR if defined? APP_DIR
+      return APP_ROOT if defined? APP_ROOT
+
+      if ENV.key? 'APP_DIR'
+        ENV['APP_DIR']
+      elsif ENV.key? 'APP_ROOT'
+        ENV['APP_ROOT']
       end
     end
 
@@ -46,6 +50,6 @@ module ARDumper
     end
 
     private_class_method :default_dir_name, :db_dump_data_file,
-                         :dump_dir, :helper
+                         :dump_dir, :root_dir, :helper
   end
 end
