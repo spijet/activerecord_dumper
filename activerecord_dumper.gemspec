@@ -3,6 +3,9 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+AR_VERSION = ENV['RAILS_VERSION'] || '~> 5.2'
+SQLITE_VER = AR_VERSION.match(/[0-9\.]+/).to_s.to_f < 6.0 ? '1.3.0' : '1.4'
+
 require 'ar_dumper/version'
 
 Gem::Specification.new do |s|
@@ -28,7 +31,7 @@ DESC_EOF
 
   s.add_runtime_dependency 'activerecord', '>= 3.2.22', '< 6.1'
 
-  s.add_development_dependency 'bundler', '~> 1.14'
+  s.add_development_dependency 'bundler', '>= 1.14'
   s.add_development_dependency 'rspec', '~> 3.0'
-  s.add_development_dependency 'sqlite3', '~> 1.3.0'
+  s.add_development_dependency 'sqlite3', '~> ' + SQLITE_VER
 end
