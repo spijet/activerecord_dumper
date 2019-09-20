@@ -16,6 +16,7 @@ env:
   - RAILS_VERSION='~> 5.0.0'
   - RAILS_VERSION='~> 5.1.0'
   - RAILS_VERSION='~> 5.2.0'
+  - RAILS_VERSION='~> 6.0.0'
 matrix:
   fast_finish: true
   exclude:
@@ -43,6 +44,12 @@ matrix:
       rvm: 2.5
     - env: RAILS_VERSION='~> 4.2.0'
       rvm: 2.6
+    - env: RAILS_VERSION='~> 6.0.0'
+      rvm: 2.2
+    - env: RAILS_VERSION='~> 6.0.0'
+      rvm: 2.3
+    - env: RAILS_VERSION='~> 6.0.0'
+      rvm: 2.4
 before_install:
   - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
   - gem install bundler -v '< 2'
