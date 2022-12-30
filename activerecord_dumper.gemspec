@@ -29,7 +29,7 @@ DESC_EOF
 
   s.required_ruby_version = '>= 2.2'
 
-  s.add_runtime_dependency 'activerecord', '>= 3.2.22', '< 6.2'
+  s.add_runtime_dependency 'activerecord', '>= 3.2.22', '< 7.1'
 
   s.add_development_dependency 'bundler', '>= 1.14'
   s.add_development_dependency 'rspec', '~> 3.0'
