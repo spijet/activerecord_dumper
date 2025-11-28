@@ -32,6 +32,6 @@ DESC_EOF
   s.add_runtime_dependency 'activerecord', '>= 3.2.22', '< 8.2'
 
   s.add_development_dependency 'bundler', '>= 1.14'
-  s.add_development_dependency 'rspec', '~> 3.0'
   s.add_development_dependency 'sqlite3', '~> ' + SQLITE_VER
+  s.add_development_dependency 'rspec', '~> 3.13'
 end
