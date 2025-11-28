@@ -3,7 +3,7 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-AR_VERSION = ENV['RAILS_VERSION'] || '~> 5.2'
+AR_VERSION = ENV['RAILS_VERSION'] || '~> 7.2'
 SQLITE_VER = AR_VERSION.match(/[0-9\.]+/).to_s.to_f < 6.0 ? '1.3.0' : '1.4'
 
 require 'ar_dumper/version'
@@ -27,9 +27,9 @@ DESC_EOF
   s.files = Dir['README.md', 'lib/**/*']
   s.require_paths = ['lib']
 
-  s.required_ruby_version = '>= 2.2'
+  s.required_ruby_version = '>= 2.3'
 
-  s.add_runtime_dependency 'activerecord', '>= 3.2.22', '< 7.1'
+  s.add_runtime_dependency 'activerecord', '>= 3.2.22', '< 8.2'
 
   s.add_development_dependency 'bundler', '>= 1.14'
   s.add_development_dependency 'rspec', '~> 3.0'
