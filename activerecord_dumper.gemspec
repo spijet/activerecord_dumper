@@ -32,7 +32,7 @@ DESC_EOF
   s.license       = 'MIT'
 
   s.extra_rdoc_files = ['README.md']
-  s.files = Dir['README.md', 'lib/**/*']
+  s.files = Dir['README.md', 'lib/**/*', 'spec/**/*']
   s.require_paths = ['lib']
 
   s.required_ruby_version = '>= 2.3'
