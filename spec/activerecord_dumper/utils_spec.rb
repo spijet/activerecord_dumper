@@ -1,4 +1,4 @@
-module ARDumper
+module ActiveRecordDumper
   RSpec.describe Utils do
 
     it "turns an array with one record into a yaml chunk" do

@@ -35,7 +35,7 @@ RSpec.describe 'with real ActiveRecord,' do
 
   it 'dumps the user records' do
     @io = StringIO.new
-    ARDumper::Dump.dump_table_records(@io, 'users')
+    ActiveRecordDumper::Dump.dump_table_records(@io, 'users')
     @io.rewind
     expected_yml = <<EOYAML
   records:

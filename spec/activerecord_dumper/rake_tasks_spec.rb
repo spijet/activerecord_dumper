@@ -1,4 +1,4 @@
-module ARDumper
+module ActiveRecordDumper
   RSpec.describe RakeTasks do
     before do
       @serializer = instance_double(SerializationHelper::Base)

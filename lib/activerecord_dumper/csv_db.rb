@@ -1,4 +1,4 @@
-module ARDumper
+module ActiveRecordDumper
   module CSVDB
     module Helper
       def self.loader

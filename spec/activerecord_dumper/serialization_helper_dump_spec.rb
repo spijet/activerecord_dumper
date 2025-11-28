@@ -1,4 +1,4 @@
-module ARDumper
+module ActiveRecordDumper
   module SerializationHelper
     RSpec.describe Dump do
 

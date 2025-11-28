@@ -6,17 +6,17 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 AR_VERSION = ENV['RAILS_VERSION'] || '~> 7.2'
 SQLITE_VER = AR_VERSION.match(/[0-9\.]+/).to_s.to_f < 6.0 ? '1.3.0' : '1.4'
 
-require 'ar_dumper/version'
+require 'activerecord_dumper/version'
 
 Gem::Specification.new do |s|
   s.platform      = Gem::Platform::RUBY
   s.name          = 'activerecord_dumper'
-  s.version       = ARDumper::VERSION
+  s.version       = ActiveRecordDumper::VERSION
   s.authors       = ['Adam Wiggins', 'Orion Henry', 'Serge Tkatchouk']
   s.summary       = 'activerecord_dumper allows you to dump/restore any ActiveRecord database to/from a YAML file.'
   s.description   = <<DESC_EOF
-ARDumper is a fork of YamlDb gem without any explicit Rails dependencies.  This way it can be used by any AR-enabled app (e.g. Sinatra) without pulling whole Rails in.
-YamlDB/ARDumper is a database-independent format for dumping and restoring data.  It complements the database-independent schema format found in db/schema.rb.  The data is saved into db/data.yml.
+ActiveRecordDumper is a fork of YamlDb gem without any explicit Rails dependencies.  This way it can be used by any AR-enabled app (e.g. Sinatra) without pulling whole Rails in.
+YamlDB/ActiveRecordDumper is a database-independent format for dumping and restoring data.  It complements the database-independent schema format found in db/schema.rb.  The data is saved into db/data.yml.
 This can be used as a replacement for mysqldump or pg_dump, but it only supports features found in ActiveRecord-based (Rails, etc.) apps.  Users, permissions, schemas, triggers, and other advanced database features are not supported by design.
 Any database that has an ActiveRecord adapter should work.
 DESC_EOF

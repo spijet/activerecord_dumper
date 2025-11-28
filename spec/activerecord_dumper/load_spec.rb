@@ -1,4 +1,4 @@
-module ARDumper
+module ActiveRecordDumper
   RSpec.describe Load do
     before do
       allow(SerializationHelper::Utils).to(

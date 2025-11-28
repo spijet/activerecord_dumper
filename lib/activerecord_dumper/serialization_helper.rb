@@ -1,6 +1,6 @@
 require 'active_support/core_ext/kernel/reporting'
 
-module ARDumper
+module ActiveRecordDumper
   module SerializationHelper
     class Base
       attr_reader :extension

@@ -2,7 +2,7 @@ require 'rake'
 
 RSpec.describe 'Rake tasks' do
   before do
-    Rake::Application.new.rake_require('tasks/ar_dumper_tasks')
+    Rake::Application.new.rake_require('tasks/activerecord_dumper_tasks')
     Rake::Task.define_task(:environment)
   end
 
@@ -26,7 +26,7 @@ RSpec.describe 'Rake tasks' do
     end
 
     it 'invokes the correct task' do
-      expect(ARDumper::RakeTasks).to receive(:data_dump_task).once.with(no_args)
+      expect(ActiveRecordDumper::RakeTasks).to receive(:data_dump_task).once.with(no_args)
       subject.invoke
     end
   end
@@ -37,7 +37,7 @@ RSpec.describe 'Rake tasks' do
     end
 
     it 'invokes the correct task' do
-      expect(ARDumper::RakeTasks).to receive(:data_dump_dir_task).once.with(no_args)
+      expect(ActiveRecordDumper::RakeTasks).to receive(:data_dump_dir_task).once.with(no_args)
       subject.invoke
     end
   end
@@ -48,7 +48,7 @@ RSpec.describe 'Rake tasks' do
     end
 
     it 'invokes the correct task' do
-      expect(ARDumper::RakeTasks).to receive(:data_load_task).once.with(no_args)
+      expect(ActiveRecordDumper::RakeTasks).to receive(:data_load_task).once.with(no_args)
       subject.invoke
     end
   end
@@ -59,7 +59,7 @@ RSpec.describe 'Rake tasks' do
     end
 
     it 'invokes the correct task' do
-      expect(ARDumper::RakeTasks).to receive(:data_load_dir_task).once.with(no_args)
+      expect(ActiveRecordDumper::RakeTasks).to receive(:data_load_dir_task).once.with(no_args)
       subject.invoke
     end
   end

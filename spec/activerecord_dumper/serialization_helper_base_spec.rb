@@ -1,4 +1,4 @@
-module ARDumper
+module ActiveRecordDumper
   module SerializationHelper
     RSpec.describe Base do
       def prestub_active_record

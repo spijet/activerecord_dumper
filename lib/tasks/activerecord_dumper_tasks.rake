@@ -8,22 +8,22 @@ namespace :db do
   namespace :data do
     desc 'Dump contents of database to db/data.extension (defaults to yaml)'
     task dump: :environment do
-      ARDumper::RakeTasks.data_dump_task
+      ActiveRecordDumper::RakeTasks.data_dump_task
     end
 
     desc 'Dump contents of database to curr_dir_name/tablename.extension (defaults to yaml)'
     task dump_dir: :environment do
-      ARDumper::RakeTasks.data_dump_dir_task
+      ActiveRecordDumper::RakeTasks.data_dump_dir_task
     end
 
     desc 'Load contents of db/data.extension (defaults to yaml) into database'
     task load: :environment do
-      ARDumper::RakeTasks.data_load_task
+      ActiveRecordDumper::RakeTasks.data_load_task
     end
 
     desc 'Load contents of db/data_dir into database'
     task load_dir: :environment do
-      ARDumper::RakeTasks.data_load_dir_task
+      ActiveRecordDumper::RakeTasks.data_load_dir_task
     end
   end
 end

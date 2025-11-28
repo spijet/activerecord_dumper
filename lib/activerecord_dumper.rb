@@ -1,11 +1,11 @@
 require 'rubygems'
 require 'yaml'
 require 'active_record'
-require 'ar_dumper/rake_tasks'
-require 'ar_dumper/version'
-require 'ar_dumper/serialization_helper'
+require 'activerecord_dumper/rake_tasks'
+require 'activerecord_dumper/version'
+require 'activerecord_dumper/serialization_helper'
 
-module ARDumper
+module ActiveRecordDumper
   module Helper
     def self.loader
       Load
@@ -68,7 +68,7 @@ module ARDumper
   if defined?(Rails::Railtie)
     class Railtie < Rails::Railtie
       rake_tasks do
-        load File.expand_path('tasks/ar_dumper_tasks.rake', __dir__)
+        load File.expand_path('tasks/activerecord_dumper_tasks.rake', __dir__)
       end
     end
   end

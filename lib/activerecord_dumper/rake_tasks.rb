@@ -1,4 +1,4 @@
-module ARDumper
+module ActiveRecordDumper
   module RakeTasks
     def self.data_dump_task
       SerializationHelper::Base.new(helper).dump(db_dump_data_file(helper.extension))
@@ -45,7 +45,7 @@ module ARDumper
     end
 
     def self.helper
-      format_class = ENV['class'] || 'ARDumper::Helper'
+      format_class = ENV['class'] || 'ActiveRecordDumper::Helper'
       format_class.constantize
     end
 
