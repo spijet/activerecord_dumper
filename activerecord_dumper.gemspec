@@ -5,7 +5,6 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 AR_VERSION = ENV['RAILS_VERSION'] || '~> 8.1'
 AR_VERSION_NUM = AR_VERSION.match(/[0-9\.]+/).to_s.to_f
-#SQLITE_VER = AR_VERSION.match(/[0-9\.]+/).to_s.to_f < 6.0 ? '1.3.0' : '1.4'
 SQLITE_VER = case AR_VERSION_NUM
              when 0.0 ... 6.0 then ['~> 1.3.0']
              when 6.0 ... 7.1 then ['~> 1.4.0']
