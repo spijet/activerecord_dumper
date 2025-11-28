@@ -10,11 +10,11 @@ EOYAML
     end
 
     it "turns an array with two records into a yaml chunk" do
-      expect(Utils.chunk_records([%w[a b], %w[x y]])).to eq(<<EOYAML
+      expect(Utils.chunk_records([%w[a b], %w[c d]])).to eq(<<EOYAML
   - - a
     - b
-  - - x
-    - y
+  - - c
+    - d
 EOYAML
       )
     end
