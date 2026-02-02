@@ -1,4 +1,7 @@
 *.gem
+.ruby-version
 /.bundle/
+/checksums/
+/coverage/
 /pkg/
 Gemfile.lock
