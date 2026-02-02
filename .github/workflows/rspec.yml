@@ -32,26 +32,37 @@ jobs:
         # Rails 8.0 is for Ruby >=3.2.0, < 3.5.0
         # Rails 8.1 is for Ruby >=3.2.0, < 3.5.0
         rails-version: ["6.1", "7.0", "7.1", "7.2", "8.0", "8.1"]
+
+
+        bundler-version: ["latest"]
+
         include:
           # Rails 4.2 is for Ruby >=1.9.3, < 2.5.0
           - rails-version: "4.2"
             ruby-version: "2.3"
+            bundler-version: "1"
           - rails-version: "4.2"
             ruby-version: "2.4"
+            bundler-version: "1"
 
           # Rails 5.0 is for Ruby >=2.2.2, < 2.5.0
           - rails-version: "5.0"
             ruby-version: "2.3"
+            bundler-version: "2"
           - rails-version: "5.0"
             ruby-version: "2.4"
+            bundler-version: "2"
 
           # Rails 5.1 is for Ruby >=2.2.2, < 2.6.0
           - rails-version: "5.1"
             ruby-version: "2.3"
+            bundler-version: "2"
           - rails-version: "5.1"
             ruby-version: "2.4"
+            bundler-version: "2"
           - rails-version: "5.1"
             ruby-version: "2.5"
+            bundler-version: "2"
 
           # Rails 5.2 is for Ruby >=2.2.2, < 2.7.0
           - rails-version: "5.2"
@@ -129,7 +140,7 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         rubygems: "latest"
-        bundler: "latest"
+        bundler: ${{ matrix.bundler-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
       run: bundle exec rake
