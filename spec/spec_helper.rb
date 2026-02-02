@@ -1,6 +1,11 @@
-require 'coveralls'
+# frozen_string_literal: true
 
-Coveralls.wear!
+require 'simplecov'
+require 'simplecov-lcov'
+
+SimpleCov::Formatter::LcovFormatter.config.report_with_single_file = true
+SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
+SimpleCov.start
 
 require 'logger'
 require 'activerecord_dumper'
