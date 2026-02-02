@@ -131,6 +131,7 @@ jobs:
             ruby-version: "3.1"
     env:
       RAILS_VERSION: "~> ${{matrix.rails-version}}.0"
+      COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Ruby
