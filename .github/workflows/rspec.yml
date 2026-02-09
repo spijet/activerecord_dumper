@@ -68,20 +68,27 @@ jobs:
           # Rails 5.2 is for Ruby >=2.2.2, < 2.7.0
           - rails-version: "5.2"
             ruby-version: "2.3"
+            bundler-version: "2"
           - rails-version: "5.2"
             ruby-version: "2.4"
+            bundler-version: "2"
           - rails-version: "5.2"
             ruby-version: "2.5"
+            bundler-version: "2"
           - rails-version: "5.2"
             ruby-version: "2.6"
+            bundler-version: "2"
 
           # Rails 6.0 is for Ruby >=2.5.0, < 3.0.0
           - rails-version: "6.0"
             ruby-version: "2.5"
+            bundler-version: "2"
           - rails-version: "6.0"
             ruby-version: "2.6"
+            bundler-version: "2"
           - rails-version: "6.0"
             ruby-version: "2.7"
+            bundler-version: "2"
 
 
         exclude:
