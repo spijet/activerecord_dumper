@@ -1,7 +1,8 @@
 # ActiveRecord Dumper
+[[![Gem Version](https://badge.fury.io/rb/activerecord_dumper.svg?icon=si%3Arubygems)](https://badge.fury.io/rb/activerecord_dumper)](https://rubygems.org/gems/activerecord_dumper)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spijet/activerecord_dumper/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/spijet/activerecord_dumper.svg)](https://github.com/spijet/activerecord_dumper/issues)
-[![Build Status](https://img.shields.io/travis/spijet/activerecord_dumper.svg)](https://travis-ci.com/spijet/activerecord_dumper)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/spijet/activerecord_dumper/rspec.yml?label=RSpec)](https://github.com/spijet/activerecord_dumper/actions/workflows/rspec.yml)
 [![Coverage Status](https://img.shields.io/coveralls/spijet/activerecord_dumper.svg)](https://coveralls.io/github/spijet/activerecord_dumper?branch=master)
 
 ActiveRecordDumper is a fork of YamlDb gem without any explicit Rails dependencies. This
