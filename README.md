@@ -1,5 +1,5 @@
 # ActiveRecord Dumper
-[[![Gem Version](https://badge.fury.io/rb/activerecord_dumper.svg?icon=si%3Arubygems)](https://badge.fury.io/rb/activerecord_dumper)](https://rubygems.org/gems/activerecord_dumper)
+[![Gem Version](https://badge.fury.io/rb/activerecord_dumper.svg?icon=si%3Arubygems)](https://rubygems.org/gems/activerecord_dumper)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spijet/activerecord_dumper/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/spijet/activerecord_dumper.svg)](https://github.com/spijet/activerecord_dumper/issues)
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/spijet/activerecord_dumper/rspec.yml?label=RSpec)](https://github.com/spijet/activerecord_dumper/actions/workflows/rspec.yml)
