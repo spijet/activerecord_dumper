@@ -1,4 +1,4 @@
-## Unreleased
+## activerecord_dumper 0.9.1
 
 * Add direct require for "logger" (fixes AR 6.x and 7.0 tests);
 * Switch CI stack to SimpleCov + Coveralls + GitHub Actions;
