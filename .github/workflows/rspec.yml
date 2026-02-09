@@ -146,6 +146,8 @@ jobs:
           - rails-version: "8.1"
             ruby-version: "3.1"
     env:
+      BUNDLE_NO_RDOC: "true"
+      BUNDLE_NO_RI: "true"
       RAILS_VERSION: "~> ${{matrix.rails-version}}.0"
       COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
     steps:
