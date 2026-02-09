@@ -17,7 +17,8 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  rspec:
+    name: "RSpec: Ruby v${{ matrix.ruby-version }} / Rails v${{ matrix.rails-version }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -165,10 +166,11 @@ jobs:
     - name: Coveralls Parallel
       uses: coverallsapp/github-action@v2
       with:
-        flag-name: run-${{ join(matrix.*, '-') }}
+        flag-name: run-rb${{ matrix.ruby-version }}-ar${{ matrix.rails-version }}-b${{ matrix.bundler-version }}
         parallel: true
 
   finish:
+    name: Coveralls Wrap-up
     needs: test
     if: ${{ always() }}
     runs-on: ubuntu-latest
